@@ -30,8 +30,9 @@ export default {
     },
     created (){
         axios
-        .get(process.env.VUE_APP_LINK+process.env.VUE_APP_API_KEY,{ mode: 'no-cors'})
+        .get(process.env.VUE_APP_CORS_ANYWHERE+process.env.VUE_APP_LINK+process.env.VUE_APP_API_KEY)
         .then(res =>{
+            console.log(res);
             this.posts=res.data.articles;
             const data =this.posts;
             this.source_news.push("All")

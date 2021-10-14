@@ -32,7 +32,7 @@ export default {
           const key1=this.searchQuery.replaceAll(" ","+")
           this.showSearch=true
           await axios
-          .get(process.env.VUE_APP_LINK_SEARCH+key1+"&apiKey="+process.env.VUE_APP_API_KEY,{ mode: 'no-cors'})
+          .get(process.env.VUE_APP_LINK_SEARCH+key1+"&apiKey="+process.env.VUE_APP_API_KEY)
           .then(res=>{
               this.resultSearch=res.data.articles
               console.log(this.resultSearch);
